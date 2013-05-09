@@ -311,6 +311,11 @@ public class CompilerTest {
 		run("interpolation");
 	}
 
+    @Test
+    public void multipleConditionalBlockInMixin(){
+        run("multiple_conditional_block_in_mixin");
+    }
+
 	@Test
 	public void xml() {
 	    String tmp = expectedFileNameExtension;

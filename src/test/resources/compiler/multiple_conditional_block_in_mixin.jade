@@ -1,0 +1,27 @@
+mixin conditionalWithNamedBlock(fooOrBar)
+  if (fooOrBar)
+    .foo
+      block foo
+  else
+    .bar
+      block bar
+
+mixin conditional(fooOrBar)
+  if (fooOrBar)
+    .foo
+      block
+  else
+    .bar
+      block
+
++conditional(true)
+  |Hello Foo
+
++conditional(false)
+  |Hello Bar
+
++conditionalWithNamedBlock(true)
+  |Hello Foo
+
++conditionalWithNamedBlock(false)
+  |Hello Bar
